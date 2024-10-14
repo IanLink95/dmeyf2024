@@ -1,0 +1,18 @@
+1- Correr archivo pre_procesamiento.ipynb.
+	*Generará archivo competencia_01_preprocesamiento.csv
+2- Correr archivo future_engineering.ipynb.
+	*Correr hasta el apartado C.2.  Referencia Abril (-3 meses). ya que es el usado para el modelo final. Las otras combinaciones fueron descartadas posteriormente.
+	*Generará archivo competencia_01_menos3_v2.csv
+3- Correr archivo optimizacion_hiperparámetros.ipynb.
+	*Correr hasta apartado B. Train con Abril con DF -3 con ratios incluidos. ya que es el usado apra el modelo final. Las otras combinaciones fueron descartadas posteriormente.
+	*Generará el estudio de Optuna exp_731_lgbm_train_abril_menos_3_V2.
+4- Correr archivo envios_kaggle.ipynb
+	* Leer "Introducción" y correr a partir del apartado "b. Modelo v2 -3 (Abril) sin Prestamos Personales."
+	*A partir del archivo competencia_01_menos3_v2.csv, y del estudio de Optuna exp_731_lgbm_train_abril_menos_3_V2...
+		- Se seleccionan los mejores hiperparámetros.
+		- Se envian con 10 semillas distintas distintos cortes.
+		- Se elije el mejor corte, y se envian con 60 semillas distintas, diferentes entrenamientos.
+		- Se calcula el promedio entre los 60 envios de dicho punto de corte.
+		- Se selecciona el envío en Kaggle más similar al promedio calculado anteriormente, con el fin de aproximarse al promedio del Privado.
+		- Aclaración... Finalmente se eligió el punto de corte 11750 como el mejor a posteriori de correr 60 semillas para el punto de corte 12000 y 11750
+
