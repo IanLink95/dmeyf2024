@@ -21,11 +21,11 @@ jugadoras
 # vectorizo la funcion  ftirar
 vec_ftirar = np.vectorize(ftirar)
 
-for i in range(10):
+for i in range(10): # 10 rondas.
   vaciertos = vec_ftirar(jugadoras, 10) # 10 tiros libres cada jugadora
-  mejor = np.argmax(vaciertos)
-  aciertos_torneo = vaciertos[mejor]
-  aciertos_segunda = vec_ftirar(jugadoras[mejor], 10)
-  print(aciertos_torneo, "\t", aciertos_segunda)
+  mejor = np.argmax(vaciertos) # agarro a la mejora jugadora de mi primera ronda.
+  aciertos_torneo = vaciertos[mejor] # agarro a la mejora jugadora de mi primera ronda.
+  aciertos_segunda = vec_ftirar(jugadoras[mejor], 10) # a mi mejora jugadora, la hago tirar una ronda de 10 tiros.
+  print(aciertos_torneo, "\t", aciertos_segunda) # Veo los resultados.
 
 
