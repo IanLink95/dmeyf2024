@@ -1,0 +1,8 @@
+Ejecutar las notebooks en el orden de aparición. Esto es:
+
+1- 1.clase_ternaria.ipynb
+2- 2.pre_procesamiento.ipynb
+3- 3.future_engineering.ipynb
+4- 4.undersampling.ipynb
+5- optimizacion_hiperparametros.ipynb
+6- semillerio_kaggle.ipynb
